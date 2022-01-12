@@ -10,7 +10,12 @@ public class NPC_Panda extends NPC_Entity {
     public NPC_Panda(FullChunk chunk, CompoundTag nbt) {
         super(chunk, nbt);
     }
-    
+
+    @Override
+    public float getHeight() {
+        return 1.25f;
+    }
+
     @Override
     public int getNetworkId() {
         return NID;

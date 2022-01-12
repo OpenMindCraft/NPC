@@ -12,6 +12,11 @@ public class NPC_Witch extends NPC_Entity {
     }
 
     @Override
+    public float getHeight() {
+        return 1.6f;
+    }
+
+    @Override
     public int getNetworkId() {
         return NID;
     }

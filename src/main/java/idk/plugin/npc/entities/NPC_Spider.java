@@ -12,6 +12,11 @@ public class NPC_Spider extends NPC_Entity {
     }
 
     @Override
+    public float getHeight() {
+        return 0.5f;
+    }
+
+    @Override
     public int getNetworkId() {
         return NID;
     }

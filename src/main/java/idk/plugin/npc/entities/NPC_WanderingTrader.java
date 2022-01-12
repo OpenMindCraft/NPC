@@ -12,6 +12,11 @@ public class NPC_WanderingTrader extends NPC_Entity {
     }
 
     @Override
+    public float getHeight() {
+        return 1.95f;
+    }
+
+    @Override
     public int getNetworkId() {
         return NID;
     }

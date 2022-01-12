@@ -10,7 +10,12 @@ public class NPC_MagmaCube extends NPC_Entity {
     public NPC_MagmaCube(FullChunk chunk, CompoundTag nbt) {
         super(chunk, nbt);
     }
-    
+
+    @Override
+    public float getHeight() {
+        return 1.0f;
+    }
+
     @Override
     public int getNetworkId() {
         return NID;

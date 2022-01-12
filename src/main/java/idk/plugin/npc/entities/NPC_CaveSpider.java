@@ -12,6 +12,11 @@ public class NPC_CaveSpider extends NPC_Entity {
     }
 
     @Override
+    public float getHeight() {
+        return 0.2f;
+    }
+
+    @Override
     public int getNetworkId() {
         return NID;
     }

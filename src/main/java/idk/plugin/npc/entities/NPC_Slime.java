@@ -12,6 +12,11 @@ public class NPC_Slime extends NPC_Entity {
     }
 
     @Override
+    public float getHeight() {
+        return 1.0f;
+    }
+
+    @Override
     public int getNetworkId() {
         return NID;
     }

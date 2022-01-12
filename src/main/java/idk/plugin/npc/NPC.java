@@ -16,12 +16,13 @@ import java.util.List;
 
 public class NPC extends PluginBase {
 
-    public static final List<String> entities = Arrays.asList("Bat", "Blaze", "Cat", "CaveSpider", "Chicken", "Cow", "Creeper",
-            "Dolphin", "Donkey", "ElderGuardian", "Enderman", "Endermite", "Evoker", "Ghast", "Guardian",
-            "Horse", "Human", "Husk", "IronGolem", "Lama", "Mooshroom", "MagmaCube", "Mule", "Ocelot", "Panda", "Parrot", "Phantom",
-            "Pig", "Pillager", "PolarBear", "Rabbit", "SkeletonHorse", "Sheep", "Shulker", "Silverfish", "Skeleton", "Slime",
-            "Snowman", "Spider", "Squid", "Stray", "Turtle", "Vex", "Villager", "Vindicator", "WanderingTrader", "Witch", "Wither",
-            "WitherSkeleton", "Wolf", "ZombieHorse", "Zombie", "ZombiePigman", "ZombieVillager");
+    public static final List<String> entities = Arrays.asList("Bat", "Blaze", "Cat", "CaveSpider", "Chicken", "Cow",
+            "Creeper", "Dolphin", "Donkey", "ElderGuardian", "Enderman", "Endermite", "Evoker", "Ghast", "Guardian",
+            "Horse", "Human", "Husk", "IronGolem", "Lama", "Mooshroom", "MagmaCube", "Mule", "Ocelot", "Panda",
+            "Parrot", "Phantom", "Pig", "Pillager", "PolarBear", "Rabbit", "SkeletonHorse", "Sheep", "Shulker",
+            "Silverfish", "Skeleton", "Slime", "Snowman", "Spider", "Squid", "Stray", "Turtle", "Vex", "Villager",
+            "Vindicator", "WanderingTrader", "Witch", "Wither", "WitherSkeleton", "Wolf", "ZombieHorse", "Zombie",
+            "ZombiePigman", "ZombieVillager");
 
     static List<String> id = new ArrayList<>();
     static List<String> kill = new ArrayList<>();
@@ -119,7 +120,8 @@ public class NPC extends PluginBase {
                     .putByteArray("CapeData", p.getSkin().getCapeData().data)
                     .putInt("CapeImageWidth", p.getSkin().getCapeData().width)
                     .putInt("CapeImageHeight", p.getSkin().getCapeData().height)
-                    .putByteArray("SkinResourcePatch", p.getSkin().getSkinResourcePatch().getBytes(StandardCharsets.UTF_8))
+                    .putByteArray("SkinResourcePatch",
+                            p.getSkin().getSkinResourcePatch().getBytes(StandardCharsets.UTF_8))
                     .putByteArray("GeometryData", p.getSkin().getGeometryData().getBytes(StandardCharsets.UTF_8))
                     .putByteArray("AnimationData", p.getSkin().getAnimationData().getBytes(StandardCharsets.UTF_8))
                     .putBoolean("PremiumSkin", p.getSkin().isPremium())
@@ -158,7 +160,8 @@ public class NPC extends PluginBase {
                     }
 
                     if (!entities.contains(args[1])) {
-                        sender.sendMessage("§cEntity §4" + args[1] + "§c is not supported. You can see all supported entities with §e/npc list§c command. Notice that the entity name is case sensitive.");
+                        sender.sendMessage("§cEntity §4" + args[1]
+                                + "§c is not supported. You can see all supported entities with §e/npc list§c command. Notice that the entity name is case sensitive.");
                         return true;
                     }
                     String name;
@@ -251,14 +254,16 @@ public class NPC extends PluginBase {
                         return true;
                     }
                     Entity entity = player.getLevel().getEntity(Integer.parseInt(args[1]));
-                    if (entity instanceof NPC_Entity || entity instanceof NPC_Human || entity.namedTag.getBoolean("npc")) {
+                    if (entity instanceof NPC_Entity || entity instanceof NPC_Human
+                            || entity.namedTag.getBoolean("npc")) {
                         List<StringTag> cmddd = entity.namedTag.getList("Commands", StringTag.class).getAll();
                         player.sendMessage("§aCommands of §e" + entity.getName() + " (" + entity.getId() + ")§a:");
                         for (StringTag cmdd : cmddd) {
                             player.sendMessage(cmdd.data);
                         }
                         List<StringTag> cmdddd = entity.namedTag.getList("PlayerCommands", StringTag.class).getAll();
-                        player.sendMessage("§aPlayer commands of §e" + entity.getName() + " (" + entity.getId() + ")§a:");
+                        player.sendMessage(
+                                "§aPlayer commands of §e" + entity.getName() + " (" + entity.getId() + ")§a:");
                         for (StringTag cmdd : cmdddd) {
                             player.sendMessage(cmdd.data);
                         }
@@ -334,7 +339,8 @@ public class NPC extends PluginBase {
                     }
                     Entity en3 = player.getLevel().getEntity(Integer.parseInt(args[1]));
                     if (en3 instanceof NPC_Human || en3 instanceof NPC_Entity || en3.namedTag.getBoolean("npc")) {
-                        en3.namedTag.putList(new ListTag<StringTag>("Commands")).putList(new ListTag<StringTag>("PlayerCommands"));
+                        en3.namedTag.putList(new ListTag<StringTag>("Commands"))
+                                .putList(new ListTag<StringTag>("PlayerCommands"));
                         sender.sendMessage("§aCommands removed");
                     } else {
                         player.sendMessage("§cNo NPC found with that ID");

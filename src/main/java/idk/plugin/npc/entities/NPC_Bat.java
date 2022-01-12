@@ -12,6 +12,11 @@ public class NPC_Bat extends NPC_Entity {
     }
 
     @Override
+    public float getHeight() {
+        return 0.4f;
+    }
+
+    @Override
     public int getNetworkId() {
         return NID;
     }

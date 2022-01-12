@@ -12,6 +12,11 @@ public class NPC_Blaze extends NPC_Entity {
     }
 
     @Override
+    public float getHeight() {
+        return 1.4f;
+    }
+
+    @Override
     public int getNetworkId() {
         return NID;
     }

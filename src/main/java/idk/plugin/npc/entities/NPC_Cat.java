@@ -10,7 +10,12 @@ public class NPC_Cat extends NPC_Entity {
     public NPC_Cat(FullChunk chunk, CompoundTag nbt) {
         super(chunk, nbt);
     }
-    
+
+    @Override
+    public float getHeight() {
+        return 0.7f;
+    }
+
     @Override
     public int getNetworkId() {
         return NID;

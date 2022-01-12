@@ -10,12 +10,12 @@ import cn.nukkit.nbt.tag.CompoundTag;
 import cn.nukkit.network.protocol.AddPlayerPacket;
 
 public class NPC_Human extends EntityHuman {
-    
+
     public NPC_Human(FullChunk chunk, CompoundTag nbt) {
         super(chunk, nbt);
         this.setDataProperty(new FloatEntityData(DATA_SCALE, this.namedTag.getFloat("scale")));
     }
-      
+
     @Override
     public void spawnTo(Player player) {
         if (!this.hasSpawned.containsKey(player.getLoaderId())) {
@@ -24,7 +24,8 @@ public class NPC_Human extends EntityHuman {
             Skin skin = this.skin;
             skin.setTrusted(true);
             this.setSkin(skin);
-            this.server.updatePlayerListData(this.getUniqueId(), this.getId(), this.getName(), this.skin, new Player[]{player});
+            this.server.updatePlayerListData(this.getUniqueId(), this.getId(), this.getName(), this.skin,
+                    new Player[] { player });
 
             AddPlayerPacket pk = new AddPlayerPacket();
             pk.uuid = this.getUniqueId();
@@ -43,15 +44,15 @@ public class NPC_Human extends EntityHuman {
             pk.item = this.getInventory().getItemInHand();
             pk.metadata = this.dataProperties;
             player.dataPacket(pk);
-            
+
             this.inventory.setHelmet(Item.fromString(this.namedTag.getString("Helmet")));
             this.inventory.setChestplate(Item.fromString(this.namedTag.getString("Chestplate")));
             this.inventory.setLeggings(Item.fromString(this.namedTag.getString("Leggings")));
             this.inventory.setBoots(Item.fromString(this.namedTag.getString("Boots")));
-            
+
             this.inventory.sendArmorContents(player);
 
-            this.server.removePlayerListData(this.getUniqueId(), new Player[]{player});
+            this.server.removePlayerListData(this.getUniqueId(), new Player[] { player });
 
             super.spawnTo(player);
         }

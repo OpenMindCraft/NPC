@@ -6,9 +6,14 @@ import cn.nukkit.nbt.tag.CompoundTag;
 public class NPC_Lama extends NPC_Entity {
 
     public static final int NID = 29;
-    
+
     public NPC_Lama(FullChunk chunk, CompoundTag nbt) {
         super(chunk, nbt);
+    }
+
+    @Override
+    public float getHeight() {
+        return 1.87f;
     }
 
     @Override

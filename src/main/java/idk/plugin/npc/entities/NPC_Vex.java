@@ -11,6 +11,10 @@ public class NPC_Vex extends NPC_Entity {
         super(chunk, nbt);
     }
 
+    public float getHeight() {
+        return 0.4f;
+    }
+
     @Override
     public int getNetworkId() {
         return NID;

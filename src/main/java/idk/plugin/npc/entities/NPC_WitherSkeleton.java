@@ -12,6 +12,11 @@ public class NPC_WitherSkeleton extends NPC_Entity {
     }
 
     @Override
+    public float getHeight() {
+        return 2.1f;
+    }
+
+    @Override
     public int getNetworkId() {
         return NID;
     }
