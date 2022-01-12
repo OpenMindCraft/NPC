@@ -17,6 +17,11 @@ public class NPC_Enderman extends NPC_Entity {
     }
 
     @Override
+    public float getWidth() {
+        return 0.6f;
+    }
+
+    @Override
     public int getNetworkId() {
         return NID;
     }

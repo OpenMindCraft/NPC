@@ -17,6 +17,11 @@ public class NPC_Guardian extends NPC_Entity {
     }
 
     @Override
+    public float getWidth() {
+        return 0.85f;
+    }
+
+    @Override
     public int getNetworkId() {
         return NID;
     }

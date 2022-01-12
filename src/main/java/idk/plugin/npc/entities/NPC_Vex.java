@@ -12,6 +12,10 @@ public class NPC_Vex extends NPC_Entity {
     }
 
     public float getHeight() {
+        return 0.8f;
+    }
+
+    public float getWidth() {
         return 0.4f;
     }
 

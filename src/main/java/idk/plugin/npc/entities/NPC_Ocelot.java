@@ -13,7 +13,12 @@ public class NPC_Ocelot extends NPC_Entity {
 
     @Override
     public float getHeight() {
-        return 0.4f;
+        return 0.7f;
+    }
+
+    @Override
+    public float getWidth() {
+        return 0.6f;
     }
 
     @Override

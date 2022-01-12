@@ -13,7 +13,12 @@ public class NPC_Cow extends NPC_Entity {
 
     @Override
     public float getHeight() {
-        return 1.0f;
+        return 1.3f;
+    }
+
+    @Override
+    public float getWidth() {
+        return 0.9f;
     }
 
     @Override

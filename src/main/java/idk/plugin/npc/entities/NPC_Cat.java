@@ -13,7 +13,12 @@ public class NPC_Cat extends NPC_Entity {
 
     @Override
     public float getHeight() {
-        return 0.7f;
+        return 0.56f;
+    }
+
+    @Override
+    public float getWidth() {
+        return 0.48f;
     }
 
     @Override

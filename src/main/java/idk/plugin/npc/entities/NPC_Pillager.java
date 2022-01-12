@@ -13,7 +13,12 @@ public class NPC_Pillager extends NPC_Entity {
 
     @Override
     public float getHeight() {
-        return 1.95f;
+        return 1.9f;
+    }
+
+    @Override
+    public float getWidth() {
+        return 1.6f;
     }
 
     @Override

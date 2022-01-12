@@ -13,7 +13,12 @@ public class NPC_Evoker extends NPC_Entity {
 
     @Override
     public float getHeight() {
-        return 1.6f;
+        return 1.9f;
+    }
+
+    @Override
+    public float getWidth() {
+        return 0.6f;
     }
 
     @Override

@@ -13,7 +13,12 @@ public class NPC_Panda extends NPC_Entity {
 
     @Override
     public float getHeight() {
-        return 1.25f;
+        return 1.5f;
+    }
+
+    @Override
+    public float getWidth() {
+        return 1.7f;
     }
 
     @Override

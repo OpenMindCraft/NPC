@@ -13,7 +13,12 @@ public class NPC_Stray extends NPC_Entity {
 
     @Override
     public float getHeight() {
-        return 1.4f;
+        return 1.9f;
+    }
+
+    @Override
+    public float getWidth() {
+        return 0.6f;
     }
 
     @Override

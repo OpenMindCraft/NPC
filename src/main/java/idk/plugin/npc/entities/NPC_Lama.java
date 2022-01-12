@@ -17,6 +17,11 @@ public class NPC_Lama extends NPC_Entity {
     }
 
     @Override
+    public float getWidth() {
+        return 0.9f;
+    }
+
+    @Override
     public int getNetworkId() {
         return NID;
     }

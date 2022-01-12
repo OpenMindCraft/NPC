@@ -14,6 +14,11 @@ public abstract class NPC_Entity extends Entity {
 
     @Override
     public float getHeight() {
-        return 1.875f;
+        return 1.0f;
+    }
+
+    @Override
+    public float getWidth() {
+        return 1.0f;
     }
 }

@@ -13,7 +13,12 @@ public class NPC_WitherSkeleton extends NPC_Entity {
 
     @Override
     public float getHeight() {
-        return 2.1f;
+        return 2.412f;
+    }
+
+    @Override
+    public float getWidth() {
+        return 0.864f;
     }
 
     @Override

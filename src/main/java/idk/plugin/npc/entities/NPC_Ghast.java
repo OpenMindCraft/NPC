@@ -13,7 +13,12 @@ public class NPC_Ghast extends NPC_Entity {
 
     @Override
     public float getHeight() {
-        return 4.5f;
+        return 4.0f;
+    }
+
+    @Override
+    public float getWidth() {
+        return 4.0f;
     }
 
     @Override

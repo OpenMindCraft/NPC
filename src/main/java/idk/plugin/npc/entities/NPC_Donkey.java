@@ -13,7 +13,12 @@ public class NPC_Donkey extends NPC_Entity {
 
     @Override
     public float getHeight() {
-        return 0.9f;
+        return 1.6f;
+    }
+
+    @Override
+    public float getWidth() {
+        return 1.4f;
     }
 
     @Override

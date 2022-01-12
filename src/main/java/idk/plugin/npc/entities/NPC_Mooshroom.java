@@ -13,7 +13,12 @@ public class NPC_Mooshroom extends NPC_Entity {
 
     @Override
     public float getHeight() {
-        return 0.8f;
+        return 1.3f;
+    }
+
+    @Override
+    public float getWidth() {
+        return 0.9f;
     }
 
     @Override

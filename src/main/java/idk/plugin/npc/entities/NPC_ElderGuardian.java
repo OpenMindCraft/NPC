@@ -11,7 +11,17 @@ public class NPC_ElderGuardian extends NPC_Entity {
         super(chunk, nbt);
         this.setDataFlag(DATA_FLAGS, DATA_FLAG_ELDER, true);
     }
-    
+
+    @Override
+    public float getHeight() {
+        return 1.9975f;
+    }
+
+    @Override
+    public float getWidth() {
+        return 1.9975f;
+    }
+
     @Override
     public int getNetworkId() {
         return NID;

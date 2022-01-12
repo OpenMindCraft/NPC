@@ -12,8 +12,8 @@ public class NPC_Parrot extends NPC_Entity {
     }
 
     @Override
-    public float getHeight() {
-        return 0.9f;
+    public float getWidth() {
+        return 0.5f;
     }
 
     @Override

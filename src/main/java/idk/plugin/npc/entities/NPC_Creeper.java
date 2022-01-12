@@ -13,7 +13,12 @@ public class NPC_Creeper extends NPC_Entity {
 
     @Override
     public float getHeight() {
-        return 1.2f;
+        return 1.8f;
+    }
+
+    @Override
+    public float getWidth() {
+        return 0.6f;
     }
 
     @Override

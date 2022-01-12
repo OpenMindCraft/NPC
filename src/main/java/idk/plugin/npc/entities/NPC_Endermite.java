@@ -12,6 +12,16 @@ public class NPC_Endermite extends NPC_Entity {
     }
 
     @Override
+    public float getHeight() {
+        return 0.3f;
+    }
+
+    @Override
+    public float getWidth() {
+        return 0.4f;
+    }
+
+    @Override
     public int getNetworkId() {
         return NID;
     }

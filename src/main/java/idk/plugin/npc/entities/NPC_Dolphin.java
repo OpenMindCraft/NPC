@@ -13,7 +13,12 @@ public class NPC_Dolphin extends NPC_Entity {
 
     @Override
     public float getHeight() {
-        return 0.39f;
+        return 0.6f;
+    }
+
+    @Override
+    public float getWidth() {
+        return 0.9f;
     }
 
     @Override

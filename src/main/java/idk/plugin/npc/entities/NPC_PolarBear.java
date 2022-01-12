@@ -17,6 +17,11 @@ public class NPC_PolarBear extends NPC_Entity {
     }
 
     @Override
+    public float getWidth() {
+        return 1.3f;
+    }
+
+    @Override
     public int getNetworkId() {
         return NID;
     }

@@ -13,7 +13,12 @@ public class NPC_IronGolem extends NPC_Entity {
 
     @Override
     public float getHeight() {
-        return 2.4f;
+        return 2.9f;
+    }
+
+    @Override
+    public float getWidth() {
+        return 1.4f;
     }
 
     @Override

@@ -17,6 +17,11 @@ public class NPC_Shulker extends NPC_Entity {
     }
 
     @Override
+    public float getWidth() {
+        return 1.0f;
+    }
+
+    @Override
     public int getNetworkId() {
         return NID;
     }
