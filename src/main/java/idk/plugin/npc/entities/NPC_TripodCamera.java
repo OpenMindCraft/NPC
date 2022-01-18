@@ -5,7 +5,7 @@ import cn.nukkit.nbt.tag.CompoundTag;
 
 public class NPC_TripodCamera extends NPC_Entity {
 
-    public static final int NID = 126;
+    public static final int NID = 62;
 
     public NPC_TripodCamera(FullChunk chunk, CompoundTag nbt) {
         super(chunk, nbt);
